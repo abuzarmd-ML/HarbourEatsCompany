@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+#    image: openjdk:21-jre-slim
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target/HarbourEats-0.0.1-SNAPSHOT.jar:/app.jar
+    command: ["java", "-jar", "/app.jar"]
